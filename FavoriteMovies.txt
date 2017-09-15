@@ -1,8 +1,9 @@
-#List of the collaborators three favorite movies:
+#List of the collaborator's and ower's three favorite movies ranked by the collaborator:
 1. The Fall
 2. Clueless
 3. Dil Chata Hai
 4. Pan's Labyrinth
-5. Minions
-6. King Arthur
+5. King Arthur
+6. Minions
+
 
