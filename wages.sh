@@ -8,4 +8,4 @@ cat wages.csv | awk '$1~/male/{print}' | sort -n -k2 | tr "," " " | sed 's/male/
 
 cat females.txt males.txt > genderYearExperience.txt
 
-cat genderYearExperience.txt | sed 's/m/male/g' | sed 's/f/female/g'
+cat genderYearExperience.txt | sed 's/m/male/g' | sed 's/f/female/g' > years_experience_by_gender.txt
