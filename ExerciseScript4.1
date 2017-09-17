@@ -1,0 +1,4 @@
+#!/bin/bash
+#This script will sort wages.csv by gender and years of experience
+#./ExerciseScript4.1 
+sed 's/,/ /g' wages.csv | sort -k1,1 -k2,2n | cut -d' ' -f1,2 | uniq > uniquegenderexperience.txt
