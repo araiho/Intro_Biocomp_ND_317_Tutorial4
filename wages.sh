@@ -1,7 +1,8 @@
 #Run with bash wages.sh wages.csv
+#$1 is the .csv file to run $2 is the new file for the output
 
-#shell script to sort through wages.csv
-cat wages.csv | cut -d , -f 1,2 | sed 's/,/ /g'
+#Shell Script for Number 1
+cat "$1" | cut -d , -f 1,2 | sed 's/,/ /g' | sort --uniq | sort -k1,1 -k2,2 > "$2"
 
 #Shell Script for Number 2
 echo Highest Earner, with years of experience:
