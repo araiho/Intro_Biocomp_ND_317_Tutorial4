@@ -1,0 +1,6 @@
+highest_earner
+male 5 39.808917197
+lowest_earner
+female 9 0.07655561
+females_in_top10
+2
