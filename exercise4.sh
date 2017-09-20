@@ -10,14 +10,18 @@ cat $1 | cut -d , -f 1,2 | sed 's/,/ /g' | sort -k1,1 -k2,2n
 # High school experience (12 years)
 
 echo "high school minimum wage"
-cat $1 | cut -d , -f 3,4 | awk -F, '$1=="12"' | sort -k2 -n | 
-head -n 1| cut -d , -f 2
+val1=$( cat $1 | cut -d , -f 3,4 | awk -F, '$1=="12"' | sort -k2 -n | 
+head -n 1| cut -d , -f 2)
+echo $val1
 
 # College experience (16 years)
 
 echo "college minimum wage"
-cat $1 | cut -d , -f 3,4 | awk -F, '$1=="16"' | sort -k2 -n | 
-head -n 1| cut -d , -f 2
+val2=$( cat $1 | cut -d , -f 3,4 | awk -F, '$1=="16"' | sort -k2 -n | 
+head -n 1| cut -d , -f 2)
+echo $val2
 
 # Difference in minimum wage for earners
 
+echo "Difference in minimum wage for earners"
+echo "$val2 - $val1" | bc
