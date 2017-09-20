@@ -11,7 +11,7 @@ cat $1 | cut -d , -f 1,2 | sed 's/,/ /g' | sort -k1,1 -k2,2n
 
 echo "high school minimum wage"
 cat $1 | cut -d , -f 3,4 | awk -F, '$1=="12"' | sort -k2 -n | 
-head -n 1| cut -d , -f 
+head -n 1| cut -d , -f 2
 
 # College experience (16 years)
 
