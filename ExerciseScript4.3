@@ -1,6 +1,6 @@
 #!/bin/bash
 #This will hopefully work
-#./ExerciseScript4.3 val1 val2
-grep ",16," wages.csv | sed 's/,/ /g' | sort -k3 -n -r | head -n 16 | sort -k4 -n | head -1 | cut -d" " -f4 > val1
-grep ",12," wages.csv | sed 's/,/ /g' | sort -k3 -n -r | head -n 1188 | sort -k4 -n | head -1 | cut -d" " -f4 > val2
-echo "$1-$2" | bc
+#./ExerciseScript4.3
+val1="$(grep ",16," wages.csv | sed 's/,/ /g' | sort -k3 -n -r | head -n 16 | sort -k4 -n | head -1 | cut -d" " -f4)" 
+val2="$(grep ",12," wages.csv | sed 's/,/ /g' | sort -k3 -n -r | head -n 1188 | sort -k4 -n | head -1 | cut -d" " -f4)" 
+echo "$val1 - $val2" | bc
