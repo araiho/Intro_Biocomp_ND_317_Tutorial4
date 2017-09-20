@@ -1,0 +1,8 @@
+#!/bin/bash
+# This script will execute the gender, yearsExperience, and wage for the highest and lowest earners in the data
+
+cat wages.csv | cut -d ',' -f 1,2,4 | sed 's/,/ /g' | sort -k3,3n |  sed 1d | (head -n1 && tail -n1) > HighLow.txt
+
+# This script will return the number of females in the top ten earners in this data set
+
+cat wages.csv | cut -d ',' -f 1,2,4 | sed 's/,/ /g' | sort -k3,3n | tail -n10|  grep "female" | wc -l > TopEarningWomen.txt
