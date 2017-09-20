@@ -16,6 +16,6 @@ cat collegeGrads.txt | awk '{ sum += $2; n++ } END { if (n > 0) print sum / n; }
 cat highschoolGrads.txt | awk '{ sum += $2; n++ } END { if (n > 0) print sum / n; }' > "val2"
 
 #to find difference in average minimum wage between a high school and college graduate
-avgCollege=7.53786
-avgHS=5.66835
-echo "$avgCollege - $avgHS" | bc
+val1=$(cat collegeGrads.txt | awk '{sum += $2; n++ } END { if (n > 0) print sum / n; }')
+val2=$(cat highschoolGrads.txt | awk '{ sum += $2; n++ } END { if (n > 0) print sum / n; }')
+echo "$val1 - $val2" | bc
