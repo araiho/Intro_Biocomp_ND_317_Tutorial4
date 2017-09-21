@@ -9,3 +9,6 @@ val2=$(cat wages.csv|sed 's/,/ /g'|sort -k 3 -n|head -n 2542|tail -n 1188|sed 's
 echo "$val1-$val2"|bc
 
 >>>>>>> fb07a0e23b3536c900e7e8d4a4f00c5f8f8570d8
+#Returns the unique gender and years experience combinations 
+cat wages.csv | sed 's/,/ /g' | sort -k 1 -n -k 2 | sed 's/ /,/g' | cut -d , -f 1,2 | uniq
+
