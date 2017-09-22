@@ -1,3 +1,3 @@
-grep female wages.csv | cut -d , -f 1,2 | sort -k 2 -n > sortedWagelist.txt
-grep "male" wages.csv | cut -d , -f 1,2 | sort -k 2 -n >> sortedWagelist.txt
-less sortedWageList.txt
+grep "female" wages.csv | cut -d , -f 1,2 | sort -k 2 -n | tr "," " " > sortedWagelist.txt
+grep "male" wages.csv | cut -d , -f 1,2 | sort -k 2 -n | tr "," " " >> sortedWagelist.txt
+cat sortedWageList.txt
