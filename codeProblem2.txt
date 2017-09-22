@@ -1,0 +1,6 @@
+echo "Gender, YearsExperience, and Wage of highest earner"
+sort -k 4 -n wages.csv | cut -d , -f 1,2,4 | head -n 1
+echo "Gender, YearsExperience, and Wage of lowest earner"
+sort -k 4 -n wages.csv | cut -d , -f 1,2,4 | tail -n 1
+echo "Number of females in top ten wage earners"
+sort -k 4 -n wages.csv | head | grep "female" | wc -l

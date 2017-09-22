@@ -1,0 +1,3 @@
+cut -d , -f 3,4 wages.csv | grep "12," | sort -r -k 2 | head -1 | cut -d , -f 2 | read val12
+cut -d , -f 3,4 wages.csv | grep "16," | sort -r -k 2 | head -1 | cut -d , -f 2 | read val16
+echo "$val12 - $val16" | bc
